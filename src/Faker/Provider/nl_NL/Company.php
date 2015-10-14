@@ -5,11 +5,13 @@ namespace Faker\Provider\nl_NL;
 class Company extends \Faker\Provider\Company
 {
     protected static $formats = array(
+        '{{copmanyPrefix}} {{lastName}}'
         '{{lastName}} {{companySuffix}}',
         '{{lastName}} {{lastName}} {{companySuffix}}',
         '{{lastName}}',
         '{{lastName}}',
     );
-
-    protected static $companySuffix = array('VOF', 'CV', 'LLP', 'BV', 'NV', 'IBC', 'CSL', 'EESV', 'SE', 'CV', 'Stichting', '& Zonen', '& Zn');
+    
+    protected static $companyPrefix = array('Vereniging', 'Stichting');
+    protected static $companySuffix = array('VOF', 'CV', 'Maatschap', 'BV', 'NV', '& Zonen', '& Zn');
 }
